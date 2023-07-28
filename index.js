@@ -24,20 +24,20 @@ app.get('/video/:videoId', async (req, res)=>{
     }
 });
 
-app.get('/product/:videoId', async (req, res)=>{
+app.get('/:videoId/product', async (req, res)=>{
     try{
-        const products = await Product.findById(req.params.id);
-        res.json(products)
+        const product = await Product.findById(req.params.id);
+        res.json(product)
     }
     catch(error){
         res.status(500).json({message: error.message})
     }
 });
 
-app.get('/comment/:videoId', async (req, res)=>{
+app.get('/:videoId/comment', async (req, res)=>{
     try{
-        const comments = await Comment.findById(req.params.id);
-        res.json(comments)
+        const comment = await Comment.findById(req.params.id);
+        res.json(comment)
     }
     catch(error){
         res.status(500).json({message: error.message})
