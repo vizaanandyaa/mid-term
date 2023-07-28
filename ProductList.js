@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
+    videoId:{
+        require:true,
+        type: Number
+    }
     productId:{
         require:true,
         type: String
