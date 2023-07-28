@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const videoSchema = new mongoose.Schema({
     videoId:{
         require:true,
-        type: String
+        type: Number
     },
     urlImage:{
         require:true,
