@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const commentSchema = new mongoose.Schema({
+    videoId:{
+       require:true,
+       type: Number 
+    }
     username:{
         require:true,
         type: String
