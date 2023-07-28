@@ -5,9 +5,9 @@ const mongoString = process.env.DATABASE_URL;
 
 mongoose.connect(mongoString);
 const app = express();
-const Video = require('./models/VideoThumbnailList');
-const Product = require('./models/ProductList');
-const Comment = require('./models/CommentList')
+const Video = require('./VideoThumbnailList');
+const Product = require('./ProductList');
+const Comment = require('./CommentList')
 app.use(
     bodyParser.urlencoded({
         extended:true,
